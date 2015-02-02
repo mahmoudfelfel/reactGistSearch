@@ -1,0 +1,349 @@
+/* Space out content a bit */
+
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+/* Everything but the jumbotron gets side spacing for mobile first views */
+
+.header, .marketing, .footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.no-padding {
+    padding: 0 !important;
+}
+.expand-transition {
+    position: relative;
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+    transition: all 0.5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+    width: 100% !important;
+    height: 300px;
+    background-color: #fff;
+    z-index: 99;
+    box-shadow: 1px 4px 10px 2px #1c1c1c !important;
+}
+/* Custom page header */
+
+.header {
+    border-bottom: 1px solid #e5e5e5;
+}
+.logo {
+    margin: 10px auto;
+    width: 30%;
+}
+.logo img {
+    width: 100%;
+}
+/*search form*/
+.searchBox-wrapper{
+    display: flex;
+  justify-content: center;
+}
+.search-form {
+    display: flex;
+}
+.card-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid #ddd;
+    box-shadow: 0px 2px 4px 0px #ddd;
+    background-color: #fff;
+}
+.search-input {
+    width: 100%;
+    border: none;
+    height: 50px;
+    font-size: 20px;
+    outline: none;
+    color: #c2c2c2;
+}
+.autocomplete-list {
+    border-top: 1px solid #d3d3d3;
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.autocomplete-element {
+    padding: 10px 10px 10px 20px;
+    cursor: pointer;
+}
+.autocomplete-element:hover {
+    background-color: #F4F4F4;
+}
+.autocomplete-element > img {
+    border-radius: 50%;
+    width: 50px;
+}
+.autocomplete-element > span {
+    font-size: 1.6em;
+    padding: 10px 50px;
+}
+/*search results*/
+
+.gist-list {
+    margin: 20px auto;
+}
+.gist-list > ul {
+    list-style: none;
+    padding: 0;
+}
+.gist-element {
+    padding: 15px 20px 10px;
+    margin: 10px auto;
+}
+.gist-element-description {
+    font-size: 24px;
+    color: #d3d3d3;
+}
+.gist-element-data {
+    padding: 15px 0;
+    margin: 10px 0;
+    font-size: 16px;
+}
+.gist-file-name {
+    margin: 0 5px;
+    padding: 5px;
+    text-decoration: underline;
+}
+.gist-element-footer {
+    border-top: 1px solid #c2c2c2;
+    padding: 10px 0 0 0;
+}
+.expand-icon, .collapse-icon {
+    cursor: pointer;
+}
+.collapse-icon {
+    font-size: 30px;
+}
+.expand-icon {
+    font-size: 20px;
+}
+/*gist single view*/
+
+.gist-details {
+    position: absolute;
+    z-index: 999;
+    min-width: 100%;
+    min-height: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    top: 0;
+    left: 0;
+    padding: 25px;
+}
+.markdown-panel img {
+    width: 100%;
+    border: 1px solid #d3d3d3;
+}
+/*Forks*/
+
+.forks-panel {
+    display: block;
+    /* border-top: 1px solid #c2c2c2; */
+    
+    margin-top: 5px;
+    padding: 5px;
+}
+.fork-element {
+    display: block;
+    height: 44px;
+    width: 100%;
+    border-bottom: 1px solid #d3d3d3;
+    padding-top: 5px;
+}
+.fork-element > img {
+    float: left;
+    width: 33px;
+    border-radius: 50%;
+}
+.fork-data {
+    padding: 5px 10px;
+    display: inline-block;
+}
+.fork-element-footer {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+    text-decoration: underline;
+    color: #337ab7;
+}
+.fork-element-footer > .badge {
+    background-color: #337ab7;
+}
+
+.forks-btn{
+    margin-right: 5px;
+}
+
+/*file types labels, those only the top languages on github, the rest will take the default label color #777*/
+
+.gist-element-tag {
+    margin: 4px;
+}
+.tag-Python, .tag-Perl {
+    background-color: #337ab7 !important;
+}
+.tag-CSS, .tag-SCSS {
+    background-color: #337ab7 !important;
+}
+.tag-Go, .tag-JSON, .tag-PHP {
+    background-color: #5bc0de !important;
+}
+.tag-Shell, .tag-HTML {
+    background-color: #000 !important;
+}
+.tag-JavaScript, .tag-Swift, .tag-CoffeScript {
+    background-color: #f0ad4e !important;
+}
+.tag-Java, .tag-Scala, .tag-Ruby, .tag-R {
+    background-color: #d9534f !important;
+}
+/*scrollbar styles*/
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+/* Track */
+
+::-webkit-scrollbar-track {
+    border-radius: 1px;
+}
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    border-radius: 1px;
+    background: #c6c6c6;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: #c2c2c2;
+}
+/*animation styles*/
+
+.gist-element.ng-enter {
+    -webkit-animation: fadeInUp 0.6s;
+    -ms-animation: fadeInUp 0.6s;
+    animation: fadeInUp 0.6s;
+}
+.gist-element.ng-enter-stagger {
+    /* this will have a 100ms delay between each successive leave animation */
+    
+    transition-delay: 0.1s;
+    /* in case the stagger doesn't work then these two values
+   must be set to 0 to avoid an accidental CSS inheritance */
+    
+    transition-duration: 0s;
+}
+.gist-details.ng-enter {
+    -webkit-animation: fadeInUp 0.1s;
+    -ms-animation: fadeInUp 0.1s;
+    animation: fadeInUp 0.1s;
+}
+.loading-icon {
+    text-align: center;
+}
+.loader {
+    position: relative;
+    margin: 0px auto;
+    width: 100px;
+    height: 100px;
+    zoom: 1.1;
+}
+.circular {
+    animation: rotate 1s linear infinite;
+    height: 100px;
+    position: relative;
+    width: 100px;
+}
+.path {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    animation: dash 1.5s ease-in-out infinite;
+    stroke: #000;
+    stroke-linecap: round;
+}
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -35;
+    }
+    100% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -124;
+    }
+}
+/* Make the masthead heading the same height as the navigation */
+
+.header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+}
+/* Custom page footer */
+
+.footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+/* Customize container */
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+}
+.container-narrow > hr {
+    margin: 30px 0;
+}
+/* Main marketing message and sign up button */
+
+.jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+/* Supporting marketing content */
+
+.marketing {
+    margin: 40px 0;
+}
+.marketing p + h4 {
+    margin-top: 28px;
+}
+/* Responsive: Portrait tablets and up */
+
+@media screen and (min-width: 768px) {
+    /* Remove the padding we set earlier */
+    
+    .header, .marketing, .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    /* Space out the masthead */
+    
+    .header {
+        margin-bottom: 30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    
+    .jumbotron {
+        border-bottom: 0;
+    }
+}
